@@ -156,7 +156,7 @@ Yes. Quantized models (Q4_K_M) run well on CPU. Expect 5-15s per response with 8
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+GPL-3.0 license. See [LICENSE](LICENSE) for details.
 
 ---
 
