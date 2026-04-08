@@ -1,0 +1,39 @@
+# Lullus Configuration
+llm:
+  provider: ollama
+  model: "mistral:7b-instruct-v0.3-q4_K_M"
+  alternative_models:
+    - "phi3:mini"
+    - "llama3.1:8b-instruct-q4_K_M"
+    - "gemma2:9b-instruct-q4_K_M"
+  temperature: 0.7
+  max_tokens: 2048
+  context_window: 8192
+
+embeddings:
+  model: "nomic-embed-text"
+  chunk_size: 512
+  chunk_overlap: 50
+
+rag:
+  top_k: 5
+  similarity_threshold: 0.3
+  reranking: true
+
+knowledge_base:
+  watch_folder: "./knowledge_base"
+  supported_formats: [".pdf", ".docx", ".pptx", ".txt", ".md", ".epub", ".html", ".csv"]
+  auto_index: true
+
+web_search:
+  enabled: true
+  engine: duckduckgo
+  max_results: 5
+
+export:
+  default_format: markdown  # markdown, latex, docx
+  anki_export: true
+
+ui:
+  theme: "dark"
+  language: "en"  # en, de, fr, it, es, pt

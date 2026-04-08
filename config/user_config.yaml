@@ -1,0 +1,40 @@
+embeddings:
+  chunk_overlap: 50
+  chunk_size: 512
+  model: nomic-embed-text
+export:
+  anki_export: true
+  default_format: markdown
+knowledge_base:
+  auto_index: true
+  supported_formats:
+  - .pdf
+  - .docx
+  - .pptx
+  - .txt
+  - .md
+  - .epub
+  - .html
+  - .csv
+  watch_folder: ./knowledge_base
+llm:
+  alternative_models:
+  - phi3:mini
+  - llama3.1:8b-instruct-q4_K_M
+  - gemma2:9b-instruct-q4_K_M
+  context_window: 8192
+  max_tokens: 2048
+  model: mistral:7b-instruct-v0.3-q4_K_M
+  provider: ollama
+  temperature: 0.3
+rag:
+  reranking: true
+  similarity_threshold: 0.3
+  top_k: 5
+ui:
+  language: en
+  theme: dark
+web_search:
+  enabled: true
+  engine: duckduckgo
+  max_results: 5
